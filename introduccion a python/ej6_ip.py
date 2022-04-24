@@ -1,9 +1,6 @@
 #ejercicio6
 def horario (numero):
-    if numero < 60:
-        return " 0 horas y " + int(numero) + " minutos"
-    else:
-        return int(numero)/60 + "horas y  minutos"
+    return str(int(numero/60)) + " horas y " + str(numero%60) + " minutos"
     
     
 
