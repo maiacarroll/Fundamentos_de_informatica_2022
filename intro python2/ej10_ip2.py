@@ -8,4 +8,5 @@ def letra(string):
             diccionario[letra] += 1
     return diccionario
 print(letra("bebet benedetto"))
+print(letra("maia"))
 

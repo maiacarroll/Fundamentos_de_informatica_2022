@@ -9,4 +9,5 @@ def mayuscula_o_minuscula(palabra):
         return "Minuscula"
 print(mayuscula_o_minuscula("Messi"))
 print(mayuscula_o_minuscula("messi"))
+print(mayuscula_o_minuscula("maia"))
 

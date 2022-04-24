@@ -15,4 +15,5 @@ def par_o_impar(numero):
     else:
         return "impar"
 print(positivo_negativo(4))
-
+print(positivo_negativo(3))
+print(positivo_negativo(-9))
