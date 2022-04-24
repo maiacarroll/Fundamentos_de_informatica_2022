@@ -1,3 +1,13 @@
+
+
+def sueldo (base, venta):
+    if venta > 0 :
+        return base * (0,1* venta)
+    else:
+        return base
+print(sueldo(40,5))
+
+
 #ejercicio7
 s71= input("sueldo base: ")
 s72= input("venta: ")
