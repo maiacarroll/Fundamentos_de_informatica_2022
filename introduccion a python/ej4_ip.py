@@ -1,5 +1,5 @@
 #ejercicio4
-s41= input("como es tu nombre?: ")
-s42= input ("como es tu apellido?: ")
-s43= input ("como es tu segundo apellido?: ")
-print(str.upper(s41[0] + s42[0] + s43[0]))
+def nombre_completo (nombre, apellido, apellido2):
+    return str.title (nombre), str.title(apellido),str.title(apellido2)
+
+print(nombre_completo("maia", "carroll", "aramburu"))

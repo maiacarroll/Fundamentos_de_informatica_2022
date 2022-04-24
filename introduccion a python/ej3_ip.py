@@ -1,3 +1,7 @@
 #ejercicio3
-s3= input("como es tu nombre y apellido?: ")
-print("hola " + s3)
+def como_te_llamas(nombre, apellido):
+    return "Hola," + " " + nombre + " " + apellido
+
+print(como_te_llamas("Maia", "Carroll"))
+
+

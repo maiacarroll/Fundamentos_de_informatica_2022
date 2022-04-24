@@ -1,3 +1,3 @@
-s= input("ingresar texto largo: ")
-print (len(s))
-print(len("maia"))
+def texto_largo(palabra):
+    return len(palabra)
+print(texto_largo("maia"))
