@@ -1,6 +1,6 @@
 #ejercicio8
 def ejercicio (respuesta):
-    nota=[]
+    nota=0
     if respuesta == "correcta":
         nota+= 4
     elif respuesta == "incorrecta":
@@ -8,7 +8,17 @@ def ejercicio (respuesta):
     else:
         nota += 0
 print(ejercicio("incorrecta"))
+print(ejercicio("correcta"))
 
+def nota_final (respuesta,nota):
+  if respuesta == "correcta":
+    return nota + 4
+  elif respuesta == "incorrecta":
+    return nota - 1
+  else:
+    return nota
+
+print(nota_final("correcta", 3))
 
 
 
