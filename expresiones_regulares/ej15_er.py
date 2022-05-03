@@ -5,3 +5,7 @@ def validar_mail_correcto(mail):
      print(valido)
 
 validar_mail_correcto("hola@gmail.com")
+
+def mail_correct(mail):
+    "[a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+@[a-z]{1,9}(\.[a-z]{2,9}){1,2}"
+print(mail_correct("maiacarroll1@gmail.com"))

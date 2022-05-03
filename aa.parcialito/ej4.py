@@ -1,6 +1,31 @@
 ###Escribí un programa que, por un lado, debe crear una nueva carpeta en la posición actual llamada Resultado y, por otro, que lea todos los archivos con extensión .txt y escriba el contenido de todos en un único archivo llamado texto_completo.txt, que tiene que estar dentro de la carpeta Resultado. NO se pueden usar rutas absolutas
-import os
-import glob
+import os, glob
+
+def unir_txt():
+    os.mkdir("Restultado")
+    lista_txt = glob.glob("*.txt")
+    salida = open("Resultado/texto_cpmleto.txt", "a")
+    for txt in lista_txt:
+        archivo = open(txt, "r")
+        salida.write(archivo.read())
+        archivo.close()
+    salida.close()
+
+#alternativa
+def unir_txt():
+    os.mikdir("Restultado")
+    lista_txt = glob.glob("*.txt")
+    with open("Resultado/texto_completo.txt", "a") as salida:
+        for txt in lista_txt:
+            with open(txt, "r") as archivo:
+                salida.write(archivo.read())
+
+#################################################################################################################
+
+##eldeguada --> esta bien pero es mejor el de arriba
+
+
+
 
 def crear():
     os.chdir(r"Fundamentos_de_informatica_2022\aa.parcialito") #me muevo a la carpeta donde voy a trabajar 
