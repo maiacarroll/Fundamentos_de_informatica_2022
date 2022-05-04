@@ -12,3 +12,4 @@ def sin_c (string):
 
     #el ? favorece los matches internos
     # ^c --> todo mal
+print(sin_c("maiabc9suhdya8gsbc9"))

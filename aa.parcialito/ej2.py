@@ -43,5 +43,10 @@ class Auto():
     def RPMactual (self):
         return (self.RPM)
 
+fiat=Auto
+fiat.arrancar()
+fiat.subirRPM(3500)
+fiat.subircamio()
+
     
     
