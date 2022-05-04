@@ -17,7 +17,7 @@ class Perro:
     def esta_debil(self):
         self._alimento <2
 
-    
+    perro = Perro()
     print (perro.comer(100))
     print(perro._alimento)
     print (perro.caricias)

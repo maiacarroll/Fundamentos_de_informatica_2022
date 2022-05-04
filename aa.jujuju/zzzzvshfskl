@@ -1,0 +1,13 @@
+ara generar un bucle, es decir que se repite n° cantidad de veces hasta que la condición se cumple.
+Junto al while se debe de incluir la condición que se quiere cumplir antes de devolver algo.
+ej)
+cantidad = int(input("Introducir cantidad de alumnos: "))
+alumnos = {}
+for num in range(0, cantidad):
+alumno = input("Alumno: ")
+notas = []
+nota = input("Nota: ")
+while nota >= 0:
+notas.append(nota)
+nota = int(input("Nota: "))
+alumnos[alumno] = notas

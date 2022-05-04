@@ -4,12 +4,14 @@
 
 import re
 def cuantas_veces (string):
-    resultado = re.findall("bc9", string)
-    return len(resultado)
+    return len(re.findall("bc9", string))
 
-def sin_c (string):
-    return re.findall("aa[^c]*?), gg", string)
+#def sin_c (string):
+ #   return re.findall("aa([^c].*?)gg", string)
 
     #el ? favorece los matches internos
-    # ^c --> todo mal
-print(sin_c("maiabc9suhdya8gsbc9"))
+    # ^c --> desde aa a gg no tiene q haber C
+    #* --> ning o mas
+    #+ --> 1 o mas
+    #? --> cero o una
+print(cuantas_veces("maiabc9suhdya8gsbc9"))

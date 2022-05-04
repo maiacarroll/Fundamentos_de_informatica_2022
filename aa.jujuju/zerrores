@@ -1,0 +1,41 @@
+Sintaxis
+try:
+	acción a realizar si NO hay errores dentro del try
+except:
+	acción a realizar si SI hay errores dentro del try
+else:
+acción a realizar SI NO hay ninguno except (se ejecuta después del finally, si es que hay)
+finally:
+acción a realizar luego que se ejecute el try o el except, es decir, se ejecuta independientemente de si hubo errores o no
+Creación de errores
+Cuando conozco los posibles errores que pueda tener mi programa, puede crear mis propios errores y/o ejecutar un except unicamente para un error en especifico, aunque este except se puede ejecutar una o varias veces (cada una de ellas con un error diferente), dejando por último a un except general en caso de que hubiera un error que no haya contemplado.
+except ZeroDivisionError:
+	acción a realizar cuando en el try se quiera dividir algo por cero
+except TypeError:
+acción a realizar cuando en el try se quiera mezclar (y no se pueda) distintos tipos de datos
+except (ZeroDivisionError, TypeError):
+	accion a realizar
+except NameError;
+acción a realizar cuando en el try se haya usado una variable sin definirla previamente
+Raise
+Siguiendo con la logica de los except para crear errores, vos también podes crear tus propios mensajes de error para cuando se ejecute un except especial y también forzar al programa a ejecutar errores,
+Ejemplo:
+try: 
+	resultado = a + b
+	if resultado < 0:
+		raise ValueError(“no se puede resul negativo”)
+except ValueError as err
+	print(err)
+----------------
+try:
+	acción a realizar
+	if condición:
+		raise ZeroDivisionError(“Se intento dividir por cero”)
+except ZeroDivisionError:
+	acción a realizar
+except:
+	acción a realizar
+Entonces lo que esta pasando en este ejemplo es que si se cumple la condición en el try se va a ejecutar el error ZeroDivisionError independientemente de si era un error o no, y si no pusiste ningún except se te frenará el programa, pero para eso generá un excepto personalizado para que no pase.
+Para devolver el mensaje que le pase a ese error en el raise, puedo hacer lo siguiente:
+except ZeroDivisionError as variable_error:
+	print(variable_error)

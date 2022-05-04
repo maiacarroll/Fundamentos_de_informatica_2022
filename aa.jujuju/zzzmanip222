@@ -1,0 +1,57 @@
+Manipulación de archivos
+Abrir archivos
+Existen dos formas:
+- archivo = open(path_archivo, modo)
+archivo.close() => Ya que si lo abro de esta manera hay que cerrarlo manualmente.
+Existe un método para preguntarle al programa si el archivo está cerrado o no.
+archivo.closed()
+- with open(path_archivo, modo) as variable_para_llamar_archivo:
+	accion a realizar
+De esta última manera, el archivo se cerrará automaticamente.
+path_archivo => es un objeto de tipo str que indica la ruta en la que se encuentra el archivo.
+modo => es un objeto de tipo str que indica la forma en la que Python accederá al archivo en cuestión.
+r: abre un archivo solo para la lectura
+r+: abre un archivo solo leer y escribir
+a: abre un archivo para escribir (si ya existe texto dentro del escribo, simplemente se agregará debajo) y si este no existe creará uno con el contenido que le pasemos.
+w: abre un archivo y sobreescribe el contenido que ya exista dentro del mismo, pero si no existe el archivo simplemente creará uno con ese contenido que le pasemos.
+Una vez que instanciemos esto, por debajo para podremos acceder a los métodos que queramos (dentro del que hayamos definido como modo).
+--------
+archivo = open(“/examen/examen.txt”, “r”)
+print(archivo.read())
+print(archivo.readlines())
+archivo.close()
+archivo = open(“/examen/examen.txt”, “a”)
+archivo.write(“texto”)
+archivo.close()
+archivo.read()
+archivo.readline()
+archivo.readlines()
+archivo.readable()
+archivo.write()
+archivo.writelines()
+archivo.writeable()
+Rutas absolutas y relativas
+Absoluta: el path o ruta a un archivo, será entonces, el recorrido de directorios o carpetas que debemos recorrer para llegar a nuestro archivo. Esta se escribe separando los nombres de los respectivos directorios separados por “/”.
+"C:\home\Facultad\Fundamentos\Manipulación_de_archivos.md"
+Relativa: imaginemos que esta es la estructura de archivos de nuestra computadora, donde existen dos carpetas en el home: Fotos y Facultad. Dentro de la carpeta Facultad, podemos encontrar a su vez dos directorios: Fundamentos y Estadistica. Nuestra carpeta de trabajo actual es la de Fundamentos, donde tenemos nuestro archivo de interes Manipulación_de_archivos.md.
+Desde el directorio Facultad podemos escribir la ruta relativa a nuestro archivo del siguiente modo:
+./Fundamentos/Manipulación_de_archivos.md
+Ahora si quisieramos acceder a las Fotos, podemos hacer:
+cd ../Fotos
+Modulo os y sus métodos
+“os” es un modulo de Python proporciona funciones para interactuar con el sistema operativo. 
+¿Cómo se usa?
+import os: para importar el modulo a nuestro programa
+os.getcwd(): para conocer el directorio de trabajo en el que estamos
+Si quiero pasar mi path para abrir un archivo puedo hacerlo de dos formas:
+os.getcwd() + “\\archivo.txt”
+os.path.join(os.getcwd(), “archivo.txt”)
+os.chdir(path_nuevo): para cambiarnos a otro directorio que le pasemos por parametro
+os.mkdir(nombre_carpeta): para crear una nueva carpeta
+os.listdir(): para listar los directorios que existen dentro del nuestro
+os.path.exists(path_buscado): pregunta si existe o no ese path
+os.remove(path_buscado): elimina el path buscado
+Modulo glob y sus metodos
+El módulo glob encuentra todos los nombres de ruta que coinciden con un patrón especificado.
+Devuelve una lista posiblemente vacía de nombres de ruta que coincidan con pathname, que debe ser una cadena que contenga una especificación de ruta. pathname puede ser absoluto o relativo.
+glob.glob(“*.txt”) => hace una lista con todos los archivos de la carpeta en la que estoy que contienen .txt  

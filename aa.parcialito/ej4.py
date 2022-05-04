@@ -1,13 +1,15 @@
-###Escribí un programa que, por un lado, debe crear una nueva carpeta en la posición actual llamada Resultado y, por otro, que lea todos los archivos con extensión .txt y escriba el contenido de todos en un único archivo llamado texto_completo.txt, que tiene que estar dentro de la carpeta Resultado. NO se pueden usar rutas absolutas
+###Escribí un programa que, por un lado, debe crear una nueva carpeta en la posición actual llamada Resultado y,
+#  por otro, que lea todos los archivos con extensión .txt y escriba el contenido de todos en un único archivo llamado 
+# texto_completo.txt, que tiene que estar dentro de la carpeta Resultado. NO se pueden usar rutas absolutas
 import os, glob
 
 def unir_txt():
-    os.mkdir("Restultado")
-    lista_txt = glob.glob("*.txt")
-    salida = open("Resultado/texto_cpmleto.txt", "a")
+    os.mkdir("Restultado") ######creando carpeta--> me para ahi
+    lista_txt = glob.glob("*.txt") ###### carpeta vieja donde estan los txt --> glob glob --> filtrar solo los q terminan con txt
+    salida = open("Resultado/texto_completo.txt", "a") ##### me crea el archivoo
     for txt in lista_txt:
         archivo = open(txt, "r")
-        salida.write(archivo.read())
+        salida.write(archivo.read())    ###es tipo "a" --> escribe algo aparte, no arriba
         archivo.close()
     salida.close()
 

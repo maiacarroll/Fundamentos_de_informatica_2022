@@ -46,7 +46,11 @@ class Auto():
 fiat=Auto
 fiat.arrancar()
 fiat.subirRPM(3500)
-fiat.subircamio()
+fiat.subircambio()
+
+
+######### el que hice con lucho
+
 
     
     

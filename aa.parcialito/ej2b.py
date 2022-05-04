@@ -1,5 +1,6 @@
 
-#Los efectos por revoluciones y por cambio se acumulan. Por ejemplo, si el motor está en primera y a 5000 rpm, entonces el consumo es 0.05 * 5 * 3 = 0.75 litros/km.
+#Los efectos por revoluciones y por cambio se acumulan. Por ejemplo, si el motor está en primera y a 5000 rpm,
+#  entonces el consumo es 0.05 * 5 * 3 = 0.75 litros/km.
 #El modelo debe entender estos mensajes:
 
 #arrancar() , se pone en primera con 500 rpm.

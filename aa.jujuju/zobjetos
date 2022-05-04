@@ -1,0 +1,54 @@
+¿Qué es programar orientado a objetos? Es una forma de programar. En Python todos son objetos.
+Creamos entidades computacionales orientadas a objetos. Las características de objetos:
+Cuando los objetos hacen o pueden hacer algo en principio no tienen porqué responder nada. Pero
+cuando el objeto hace o conoce la operación que le pedimos no tira error.
+Los objetos tienen o entienden ciertos atributos. Un atributo para un objeto es todo aquello que un
+objeto puede hacer. Los objetos pueden tener un estado, osea de qué cosas es inherente el objeto.
+En el caso de pepita es el estado, pero puede fluctuar y se conoce como el comportamiento de los
+objetos.
+Los objetos: entes que entienden mensajes, tienen un estado, tienen identidad y son distintas
+instancias comparando (obj1 == obj2).
+Al ser ambos de una clase, podemos esperar que hagan lo mismo las dos.
+El comportamiento de ambos objetos puede ser diferente, aunque sean de la misma clase.
+Para importar varios ‘elementos’ de un diccionario se puede hacer todo junto separado por una
+coma. Por ejemplo podemos hacer lo siguiente: >>> from aves import pepita, anastacia, roberta
+La interfaz de un objeto es el conjunto de mensajes que entiende. El ambiente es el contexto en el que
+vive un objeto. Dentro del mismo ambiente pueden convivir varios objetos.
+Polimorfismo. → tiene que haber un tercer objeto (observador).
+Programación orientada a objetos
+entidad computacional
+poo → muchos objetos que se comunican entre sí.
+● Un mensaje es un método de un objeto.
+Los mensajes se usan haciendo .mensaje()
+● Los objetos tienen estado, cambia estado → comportamiento de los objetos
+● Clases nos da una idea de que puede hacer el objeto de esa clase.
+ej) pepito es un objeto y golondrina la clase
+● Interfaz de un objeto, es el conjunto de mensajes que entiende.
+self = objeto dado
+Los métodos tienen siempre como primer argumento el “self”.
+__init__ = para construir, es el constructor.
+Clases de objetos
+Para crear una clase se inicia con la palabra class y por consiguiente se escribe el nombre de la clase
+en mayúscula. Los métodos son los mensajes que puede hacer un objeto.
+La diferencia entre un método y una función, es que la última está por fuera de la clase.
+En el método, siempre tienen como primer argumento el self, quien representa un objeto dado
+El __init__ es el constructor de pepita por ejemplo. Veámos un ejemplo:
+class Golondrina:
+def __init__(self, energia):
+self.energia = energia
+def comer_alpiste(self, gramos):
+self.energia += 4 * gramos
+def volar_en_circulos(self):
+self.volar(0)
+def volar(self, kms):
+self.energia -= 10 + kms
+pepita = Golondrina(100)
+# el 100 es el estado inicial
+__init__ viene de la palabra en inglés initialize que en castellano es inicializar.
+Es lo que se conoce como el constructor de una clase y nos permite darle
+valores iniciales a los atributos de sus instancias a la hora de crearlas.
+Por su parte, self(que en castellano sería algo así como yo) es un primer
+parámetro obligatorio que nos permite acceder a los atributos del objeto que
+estamos instanciando. Si bien ese parámetro no debe llamarse
+selfobligatoriamente, es la convención que se utiliza para nombrarlo y la
+respetaremos a lo largo de todo el recorrido

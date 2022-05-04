@@ -6,3 +6,5 @@ def imprimir(archivo,lineas):
     
     print(imprimir("bio.txt",1))
     
+
+  

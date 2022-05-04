@@ -1,0 +1,68 @@
+Importar la biblioteca = import os
+Hacer pwd en biblioteca os = cwd
+Cambiar de directorio = chdir()
+Hacer ls en biblioteca = list.dir()
+Crea una carpeta = os.mkdir()
+path = string
+PS C:\Users\memal> python
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> os.getcwd() igual a pwd
+'C:\\Users\\memal'
+>>> path = os.getcwd()
+>>> path
+'C:\\Users\\memal'
+>>> path + "\\mi_arch.txt"
+'C:\\Users\\memal\\mi_arch.txt'
+>>> path
+'C:\\Users\\memal'
+>>>
+1. quiero cambiar el path de lugar
+>>> path = "c:\\Users\\memal\\documents"
+>>> os.chdir(path)
+>>> os.getcwd()
+'c:\\Users\\memal\\documents'
+>>>
+2. creo un archivo
+>>> path = path + "\\mi_arch2.txt"
+>>> path
+'c:\\Users\\memal\\documents\\mi_arch2.txt'
+>>> with open(path, "w") as mi_arch:
+... mi_arch.write("este es mi segundo arch")
+...
+23
+>>>
+3. como corroborar que se creó el archivo
+>>> os.listdir()
+['Mi música', 'Mis imágenes', 'Mis vídeos', 'mi_arch2.txt']
+>>>
+>>> os.mkdir()
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: mkdir() missing required argument 'path' (pos 1)
+>>> os.listdir()
+['Mi música', 'Mis imágenes', 'Mis vídeos', 'mi_arch2.txt']
+>>> os.mkdir("cosa")
+>>>
+Tarea: Crear script que arme la carpeta “datos_personales” y guarde allí un archivo con tu nombre,
+apellido y edad en users.
+PS C:\Users\memal> python
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> os.getcwd() igual a pwd
+'C:\\Users\\memal'
+>>> path = os.getcwd()
+>>> path
+'C:\\Users\\memal'
+>>> path = path + "\\datos_personales"
+>>> path
+'c:\\Users\\memal\\datos_personales'
+>>> with open(path, "w") as datos:
+... datos.write("Dolores Musacchio 19")
+...
+numero x
+>>>
+>>> os.listdir()
+['Mi música', 'Mis imágenes', 'Mis vídeos', 'datos_personales']

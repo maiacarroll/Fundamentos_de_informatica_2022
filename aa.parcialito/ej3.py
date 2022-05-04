@@ -11,6 +11,9 @@ def obtener_media(lista):
         return sumatoria/longitud
     except ZeroDivisionError:
         print("no se puede dividir por 0") #0 la lista esta vacia o algo del estilo
+
+    if longitud==0:
+        raise ZeroDivisionError ("no se puede dividir por 0")
         
 
 
