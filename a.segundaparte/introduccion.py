@@ -32,4 +32,15 @@ print(pedido400)
 
 print(pedido1.headers) # toda la metadata --> la informacion de ese pedido --> la fecha - que tipo de info trae )
 
-print(pedido1.status_code) #info de ese atributo 
+print(pedido1.status_code) #atributo de ese pedido
+
+
+##https://http.cat/
+
+peididod= requests.get('https://macowins-server.herokuapp.com/ventas')
+print(peididod)
+hshdos= requests.get('https://macowins-server.herokuapp.com/ventas/2)')
+print(hshdos)
+
+remera= requests.get('https://macowins-server.herokuapp.com/prendas?remeras')
+print(remera)
